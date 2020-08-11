@@ -8,45 +8,29 @@ Homework 4
 */
 
 
-#include <stdio.h>
 #include <iostream>
 #include <cstdlib>
-#include <ctime>
 #include "numberMunchers.h"
-using namespace std;
+#include <iomanip>
+using std::cout;
+using std::cin;
+using std::setw;
+using std::setfill;
+using std::endl;
 
 
 int main()
 {
-    
-    srand(time(0));
-    int correctAns;
-    int answer;
-    string choice;
-    
+        
+    /*
+    Object question created and main greeting called.
+    */
     mulTiply question;
-
+    question.getMainGreeting();
     
 
-    do
-    {
-        question.generateQuestionsAndAnswer();
-        do
-        {
-            cout << "Enter your answer" << endl;
-            cin >> answer;
-            if (answer == correctAns)
-            {
-                question.getComment(1);
-            }
-            else
-            {
-                question.getComment(0);
-            }
-        } while (answer != correctAns);
-        cout << "wrong answer try another one? y/n" << endl;
-    } while (choice == "yes");
     return 0;
+    
 }
 
 
